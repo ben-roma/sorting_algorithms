@@ -1,23 +1,26 @@
 #ifndef SORT_H
 #define SORT_H
 
-#include <stdlib.h> /* Inclusion de la bibliothèque standard pour size_t */
+#include <stdlib.h> /* Include for size_t */
 
-/* Définition de la structure pour une liste doublement chaînée */
+/**
+ * struct listint_s - Doubly linked list node
+ * @n: Integer stored in the node
+ * @prev: Pointer to the previous element of the list
+ * @next: Pointer to the next element of the list
+ *
+ * Description: Doubly linked list node structure
+ * for Holberton project
+ */
 typedef struct listint_s
 {
-    const int n;                /* Entier stocké dans le nœud */
-    struct listint_s *prev;     /* Pointeur vers l'élément précédent de la liste */
-    struct listint_s *next;     /* Pointeur vers l'élément suivant de la liste */
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
-/* Prototype de la fonction print_array */
+/* Function prototypes */
 void print_array(const int *array, size_t size);
-
-/* Prototype de la fonction print_list */
-void print_list(const listint_t *list);
-
-/* Prototype de la fonction bubble_sort si nécessaire */
 void bubble_sort(int *array, size_t size);
 
 #endif /* SORT_H */
